@@ -13,7 +13,7 @@ run-postgres:
 run-api-node:
 	@echo Starting node api
 	cd api-node && \
-		DATABASE_URL=${DATABASE_URL} \
+		DATABASE_URL=postgres://postgres:foobarbaz@localhost:5432/postgres \
 		npm run dev
 
 .PHONY: run-api-golang
